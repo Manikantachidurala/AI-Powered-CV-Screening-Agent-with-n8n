@@ -64,7 +64,6 @@ Add your credentials to n8n using the Google OAuth node
 ✅ Use Cases
 Automated resume screening for hiring pipelines
 
-AI-powered scoring for applicant tracking systems (ATS)
 
 Recruiters & HR professionals managing bulk applications
 
