@@ -1,68 +1,72 @@
+
+
+🤖 AI-Powered CV Screening Agent
 # AI-Powered-CV-Screening-Agent-with-n8n
+A low-code AI-powered automation built using n8n, Groq API, and Google Workspace tools to streamline and automate resume screening for HR teams and hiring managers.
 
- AI-Powered CV Screening Agent
-A low-code automation project that uses n8n, Groq API, and Google Docs to automate CV screening for HR teams and hiring managers.
+This agent takes candidate info from a form, summarizes the profile using Groq LLM, evaluates fit for a specific job, and logs the result in a Google Doc and Sheet — all automatically.
 
-This AI agent automatically summarizes resumes, compares them against a job description, rates candidates, and stores the output in a Google Doc — all in a seamless, secure workflow.
+📌 Key Features
+📝 Form Submission via Google Forms
 
-📌 Features
-🔄 Resume submitted via Google Form or API
+🧠 Real-time Summarization using Groq API
 
-📑 Summary generated using Groq's LLM
+📋 Candidate Evaluation against a job description
 
-🎯 Compared against job description (JD)
+🎯 Scoring System (1–10) based on skills & fit
 
-📊 Scored on a scale of 1–10
+📄 Summary Generation into Google Docs
 
-📁 Summary + rating sent to Google Docs
+📊 Rating and Logs saved in Google Sheets
 
-🔐 Secured with Google OAuth 2.0
+🔐 OAuth 2.0 Security using Google Credentials
 
-⚙️ Workflow created using n8n (open-source automation)
+🔁 Fully automated with n8n Workflow
 
 🛠️ Tech Stack
-n8n – Workflow automation
-
-Groq API – High-speed LLM for summarization
-
-Google Docs API – Store and manage outputs
-
-Google OAuth – Authentication and access control
-
-HTTP Request Node – To interact with external APIs
-
-OpenAI/Groq Prompting – For rating and summarization logic
-
-JSON – For structured CV input and job descriptions
-
+Tool	Purpose
+n8n	Low-code workflow automation
+Groq API	High-speed LLM for summarization
+Google Forms	Input collection from candidates
+Google Docs API	Output storage & document generation
+Google Sheets	Summary and rating log
+OAuth 2.0	Google account authentication
+HTTP Request Node	Connect to external AI API
+JSON	CV and JD data formatting
 🚀 How It Works
 graph TD
-  A[Form Submission or API Upload] --> B[n8n Trigger Node]
-  B --> C[Extract CV Data]
-  C --> D[Groq API: Summarize CV]
-  D --> E[Compare with Job Description]
-  E --> F[Rate Candidate (1–10)]
-  F --> G[Send Summary + Score to Google Docs]
-🧠 Prompt Logic (Example)
-You are an HR expert. Rate the candidate based on the provided CV and job description on a scale of 1 to 10.
-Explain your reasoning in 2–3 sentences.
+  A[Google Form Submission] --> B[n8n Trigger Node]
+  B --> C[Collect & Structure Data]
+  C --> D[Groq API: Summarize & Evaluate]
+  D --> E[Parse AI Response]
+  E --> F[Generate Google Doc + Sheet Entry]
+🧠 Sample Prompt Logic (Used in n8n)
+You are an HR expert. Based on the CV and job description below, summarize the candidate and rate their suitability for the role on a scale of 1 to 10. Keep it short and clear.
 
 CV:
 {{ $json["cv_text"] }}
 
 Job Description:
 {{ $json["job_description"] }}
-🔐 Authentication
-Set up Google Cloud Project
+🔐 Authentication Setup
+Create a Google Cloud Project
 
-Enable Google Docs API
+Enable Google Docs API, Google Sheets API, and Drive API
 
-Configure OAuth 2.0 credentials
+Set up OAuth 2.0 consent screen
 
-Add your credentials to n8n using the Google OAuth node
+Add Client ID & Secret to n8n's Google OAuth node
 
 ✅ Use Cases
-Automated resume screening for hiring pipelines
+📌 Real-time CV screening in hiring pipelines
+
+🔍 Shortlisting candidates based on job role match
+
+📄 Auto-generating formatted HR summaries
+
+📊 Creating structured records for candidate tracking
+
+
 
 
 Recruiters & HR professionals managing bulk applications
