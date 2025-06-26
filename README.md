@@ -1,7 +1,7 @@
+# AI-Powered-CV-Screening-Agent-with-n8n
 
 
 🤖 AI-Powered CV Screening Agent
-# AI-Powered-CV-Screening-Agent-with-n8n
 A low-code AI-powered automation built using n8n, Groq API, and Google Workspace tools to streamline and automate resume screening for HR teams and hiring managers.
 
 This agent takes candidate info from a form, summarizes the profile using Groq LLM, evaluates fit for a specific job, and logs the result in a Google Doc and Sheet — all automatically.
